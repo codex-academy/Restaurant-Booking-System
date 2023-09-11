@@ -5,19 +5,13 @@ import exphbs from "express-handlebars";
 import bodyParser from "body-parser";
 import flash from "flash-express";
 import restaurant from './services/restaurant.js';
-const session = require("express-session"); 
+import session from "express-session"; 
 
 const app = express()
 
 app.use(express.static('public'));
+app.use(session({ secret: "your-secret-key", resave: false, saveUninitialized: true }));
 app.use(flash());
-app.use(
-    session({
-      secret: "somethingamazing",
-      resave: false,
-      saveUninitialized: false,
-    })
-  );
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
