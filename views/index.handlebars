@@ -69,13 +69,13 @@
 
         {{/each}}
     </div>
-
+<form action="/book" method="post">
     <div class="columns">
         <div class="column is-3">
             <div class="field">
                 <label for="" class="label">Number of people in booking</label>
                 <div class="control">
-                    <input class="input" type="text" name="booking_size">
+                    <input class="input" type="text" name="seats"> 
                 </div>
             </div>
         </div>
@@ -91,12 +91,11 @@
             <div class="field">
                 <label for="" class="label">Phone number</label>
                 <div class="control">
-                    <input class="input" type="text" name="phone_number">
+                    <input class="input" type="text" name="phoneNumber">
                 </div>
             </div>
         </div>
     </div>
-
     <div class="field">
         <input class="button is-primary" type="submit" value="Book">
     </div>
