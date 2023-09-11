@@ -7,6 +7,9 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": "19.7.0"
+  },
   "scripts": {
     "dev": "nodemon",
     "start": "node index.js",
